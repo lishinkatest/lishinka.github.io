@@ -1,0 +1,35 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="Miss.LiLuo"><link rel="alternative" href="/atom.xml" title="Miss.LiLuo" type="application/atom+xml"><link rel="icon" href="/favicon.png"><title>安装git及基本使用 - Miss.LiLuo</title><link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="/js/fancybox/jquery.fancybox.min.css"><!--[if lt IE 9]><script>(function(a,b){a="abbr article aside audio bdi canvas data datalist details dialog figcaption figure footer header hgroup main mark meter nav output progress section summary template time video".split(" ");for(b=a.length-1;b>=0;b--)document.createElement(a[b])})()</script><![endif]--><script src="/js/jquery-3.1.1.min.js"></script><script src="/js/fancybox/jquery.fancybox.min.js"></script></head><body style="opacity:0;"><header class="head"><h1 class="head-title u-fl"><a href="/">Miss.LiLuo</a></h1><nav class="head-nav u-fr"><ul class="head-nav__list"><li class="head-nav__item"><a class="head-nav__link" href="/archives">目录 &gt; &gt;</a></li><li class="head-nav__item"><a class="head-nav__link" href="/love">友情链接</a></li></ul></nav></header><main class="main"><article class="post"><header class="post__head"> <time class="post__time" datetime="2018-02-06T08:00:37.699Z">February 6, 2018</time><h1 class="post__title"><a href="/2018/02/06/git/">安装git及基本使用</a></h1><div class="post__main echo"><h3 id="1-安装git"><a href="#1-安装git" class="headerlink" title="1.安装git"></a>1.安装git</h3><ol>
+<li>下载地址:<br>[<a href="http://git-scm.com/download/" target="_blank" rel="noopener">http://git-scm.com/download/</a>]</li>
+</ol>
+<ol>
+<li><p>双击默认安装<br>在开始菜单找到 <strong>“Git” -&gt;”git Bash”</strong> ,出现下面窗口，说明安装成功</p>
+<p><img src="https://note.wiz.cn/api/document/files/unzip/91ada1f3-60f6-480c-8900-335e9dd5cb29/e01615e8-c8db-4930-a438-cbb96d22e589.402/index_files/476c7d00-ea9b-4e00-89bb-4eadc07deb49.png" alt="image"></p>
+</li>
+<li><p>设置用户名及邮箱</p>
+</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">"your name"</span>    --用户名</span><br><span class="line">$ git config --global user.email <span class="string">"your email"</span>   --邮  箱</span><br></pre></td></tr></table></figure>
+<h3 id="2-创建版本库"><a href="#2-创建版本库" class="headerlink" title="2. 创建版本库"></a>2. 创建版本库</h3><p>1.创建一个新的文件夹： </p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir <span class="built_in">test</span>  <span class="comment">##创建一个名叫test的文件夹 </span></span><br><span class="line">$ <span class="built_in">cd</span> <span class="built_in">test</span>     <span class="comment">##进入test 目录 </span></span><br><span class="line">$ <span class="built_in">pwd</span>    <span class="comment">##用于显示当前目录。这个仓库位于/Users/lishinka/test </span></span><br><span class="line">/Users/lishinka/<span class="built_in">test</span></span><br></pre></td></tr></table></figure>
+<p>2.通过git init命令把这个目录变成Git可以管理的仓库： </p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></table></figure>
+<p>3.把文件添加到仓库分为以下两步 </p>
+<p>   1.文件添加到仓库：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git add test.txt</span><br></pre></td></tr></table></figure>
+<p>2.把文件提交到仓库：</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m <span class="string">"输入的是本次提交的说明"</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-添加远程库及克隆远程库"><a href="#3-添加远程库及克隆远程库" class="headerlink" title="3.添加远程库及克隆远程库"></a>3.添加远程库及克隆远程库</h3><ol>
+<li>登录 ：<a href="https://github.combing" target="_blank" rel="noopener">https://github.combing</a> 并创建新仓库：</li>
+</ol>
+<p><img src="https://note.wiz.cn/api/document/files/unzip/91ada1f3-60f6-480c-8900-335e9dd5cb29/69e2f274-52a6-474b-942a-a19b5c8a9f99.429/index_files/cd5df2f6-10b5-4c47-88ff-983f0236b020.png" alt="image"></p>
+<ol>
+<li>填写仓库信息： </li>
+</ol>
+<p><img src="https://note.wiz.cn/api/document/files/unzip/91ada1f3-60f6-480c-8900-335e9dd5cb29/69e2f274-52a6-474b-942a-a19b5c8a9f99.429/index_files/accd4901-f3a2-46d9-b16c-ea5f1d4a5816.png" alt="image"></p>
+<h3 id="4-ssh连接"><a href="#4-ssh连接" class="headerlink" title="4.ssh连接"></a>4.ssh连接</h3><p>1.生成key值</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C “您的邮箱地址”<span class="comment">##生成key</span></span><br></pre></td></tr></table></figure>
+<p>2.保存key值</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.打开https://github.com/ </span><br><span class="line">2.依次点击：view profile and more-&gt;setting -&gt;ssh keys -&gt;add ssh keys </span><br><span class="line">3.将key复制到key name为自己设置</span><br></pre></td></tr></table></figure>
+<p>3.克隆远程库</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> git@github.com:lishinka/test.git</span><br></pre></td></tr></table></figure>
+</div></header><footer class="post__foot u-cf"><ul class="post__tag u-fl"><li class="post__tag__item"><a class="post__tag__link" href="/tags/git/">git</a></li></ul></footer></article><div class="comments" id="lv-container" data-id="city" data-uid="your uid"><script>(function(d, s) {var j, e = d.getElementsByTagName(s)[0];if (typeof LivereTower === 'function') { return; } j = d.createElement(s);j.src = 'https://cdn-city.livere.com/js/embed.dist.js';j.async = true;e.parentNode.insertBefore(j, e);})(document, 'script');</script></div></main><footer class="foot"><div class="foot-copy">&copy; 2016-2018 Miss.LiLuo</div></footer><script src="/js/scroller.js"></script><script src="/js/main.js"></script></body></html>
